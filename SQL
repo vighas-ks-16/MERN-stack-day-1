@@ -1,0 +1,27 @@
+create table friends(
+  name varchar(20),
+  age int,
+  job varchar(20),
+  actorName varchar(20)
+);
+
+insert into friends values('AAAA', 28, 'singer', 'aaa');
+insert into friends values('BBBB', 25, 'bartender', 'bbb');
+insert into friends values('CCCC', 26, 'actor', 'ccc');
+insert into friends values('DDDD', 29, 'paleontologist', 'ddd');
+insert into friends values('EEEE', 27, 'chef', 'eee');
+insert into friends values('FFFF', 28, 'data scientist', 'fff');
+insert into friends values('GGGG', 30, 'cafe owner', 'ggg');
+insert into friends values('HHHH', 28, 'actor', 'hhh');
+insert into friends values('IIII', 31, 'manager', 'iii');
+
+
+update friends set age = 30 where age = 29;
+
+delete from friends where name = 'fff';
+
+select * from friends order by age;
+
+select * from friends order by age desc;
+
+select count(job) as prof, job from friends group by job;
